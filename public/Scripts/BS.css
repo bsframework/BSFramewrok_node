@@ -1,0 +1,59 @@
+#Headermenu ul {
+	margin: 0px; padding: 0px; border: 0px currentColor; list-style-type: none;
+}
+#Headermenu {
+	margin-right: 0px; float: left;
+}
+#topnav ul {
+	position: relative;
+}
+#topnav li.list {
+	margin: 3px 12px 0px 0px; float: left; display: inline;
+}
+#topnav li.list2 {
+	margin: 3px 12px 0px 0px; float: left; display: inline;background-color:#1e71b1;
+}
+#topnav li a {
+	padding: 5px 7px 0px; border-radius: 3px; border: 1px solid rgb(30, 113, 177); width: 55px; height: 56px; text-align: center; color: rgb(255, 255, 255); overflow: hidden; text-decoration: none; float: left; display: inline; -webkit-border-radius: 3px; text-shadow: 0px -1px rgba(0, 0, 0, 0.2);
+}
+#topnav li a:hover {
+	background: rgb(16, 84, 136); border: 1px solid rgb(15, 78, 127);
+}
+#topnav li a.onnav {
+	background: rgb(16, 84, 136); border: 1px solid rgb(15, 78, 127);
+}
+
+
+#topnav li a img {
+	margin: 0px auto 2px; width: 32px; height: 30px; overflow: hidden; display: block;
+}
+
+#Headermenu div {
+	width: 50px; height: 50px; text-align: center; overflow: hidden; padding-top: 7px; vertical-align: middle; float: left; white-space: nowrap; cursor: pointer; word-break: keep-all; text-overflow: ellipsis;
+}
+#Headermenu div img {
+	margin: 10px 5px 0px; padding-bottom: 5px; vertical-align: middle;
+}
+#Headerbotton {
+	background: url("../images/bg_repeat.png") repeat-x 0px 0px; height: 29px; line-height: 30px; overflow: hidden; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; position: relative;
+}
+#ContentPannel {
+	margin: 0px auto; height: 100%; overflow: hidden;
+}
+#ContentPannel #div_Imain {
+	margin: 0px;
+}
+#ContentPannel iframe {
+	margin-top: 1px; margin-left: 1px;
+}
+#botton_toolbar {
+	background: rgb(247, 247, 247); width: 100%; height: 20px; text-align: center; line-height: 20px; margin-top: 1px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+.south-separator {
+	margin-right: 3px; margin-left: 3px; border-right-color: rgb(255, 255, 255); border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+#left_title {
+	list-style: none; width: 180px; height: 100%; text-align: center; color: rgb(34, 34, 34); line-height: 30px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; float: left;
+}
+
+

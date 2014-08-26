@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>首页</title>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="Scripts/jquery.easyui.min.js"></script>
+    <script src="Scripts/BSScript.js"></script>
+    <link href="Scripts/BS.css" rel="stylesheet" />
+    <link href="Scripts/themes/icon.css" rel="stylesheet" />
+    <link href="Scripts/NavDetail.css" rel="stylesheet" />
+    <script src="Scripts/knockout-2.1.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="Scripts/themes/metro/easyui.css">
+    <script>
+        $(document).ready(function () {
+            var p1 = $('#mainlayoutdiv').layout('panel', 'north').panel({
+                onCollapse: function () {
+                    $('#tab-tools').hide();
+                },
+                onExpand: function () {
+                    $('#tab-tools').show();
+                },
+            });
+        });
+
+        function BtnClick(guid, title, href, icon) {
+            var url = href;
+            $('#devmain').load(url);
+
+        }
+      
+
+    </script>
+</head>
+<body data-options="fit:true">
+    <div class="easyui-layout" id="mainlayoutdiv" data-options="fit:true">
+        <div data-options="region:'north'" style="height: 80px; padding: 5px; background-color: #1e71b1"
+            id="toppanl">
+            <div id="Headermenu">
+                <ul id="topnav">
+                    <li class="list" id="metnav_1"><a id="nav_1" onclick="addTab('功能菜单','','')" href="javascript:;">
+                        <img src="/Scripts/images/n1.png" />首页信息</a></li>
+                    <li class="list" id="metnav_3"><a id="nav_3" href="javascript:;">
+                        <img src="/Scripts/images/n2.png" />控制面板 </a></li>
+                    <li class="list" id="metnav_5"><a id="nav_4" href="javascript:;">
+                        <img src="/Scripts/images/n3.png" />安全退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-options="region:'south',split:true" style="height: 18px;">
+            <div style="width: 42%; text-align: left; float: left;">
+                <a title="点击链接" href="javascript:void()">技术支持：baimch</a> <span></span>版本 V1.1 <span
+                    class="south-separator"></span><a title="将问题提交给开发商进行解决" href="#" target="_blank">问题反馈</a>
+                <span class="south-separator"></span>
+            </div>
+            <div style="width: 16%; text-align: left; float: left;">
+                <a title=".NET开发框架" href="javascript:void()">CopyRight © 2013 By baimch</a>
+            </div>
+            <div style="width: 42%; text-align: right; float: left;">
+                <span class="south-separator"></span>登录用户：张三 <span class="south-separator"></span>
+                部门：技术部 <span class="south-separator"></span>状态：正常
+            </div>
+        </div>
+        <div data-options="region:'center',iconCls:'icon-ok'" style="border-width: 1px 1px 1px 0">
+            <div class="easyui-tabs" data-options="tools:'#tab-tools'" fit="true" id="MainTab">
+                <div title="功能菜单" data-options="tabWidth:206">
+                    <div class="easyui-layout" fit="true">
+                        <div data-options="region:'west'" title="功能导航菜单" style="width: 205px;">
+                            <div class="easyui-accordion" data-options="fit:true,border:false,selected:true">
+                                <div title="aaa" style="padding: 5px;">
+                                    <a onclick="BtnClick('aaa','bbb','http://localhost:3000/navdetail','aa')" class="easyui-linkbutton" href="javascript:;">
+                                        <span class="c1"></span>eee</a>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                        <div data-options="region:'center',iconCls:'icon-ok'" style="overflow: hidden" id="devmain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab-tools">
+            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true"
+                onclick="HideNorth()">
+                <img src="~/Scripts/fullscreen.gif" /></a>
+        </div>
+    </div>
+</body>
+</html>
