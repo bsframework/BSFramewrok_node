@@ -1,5 +1,5 @@
 exports.usermanage = function(req, res){
-  res.render('usermanage', { title: "博客首页" });
+  res.render('usermanage', { title: "用户管理" });
 };
 
 exports.navdetail = function(req, res){

@@ -9,6 +9,7 @@ var user = require('./routes/user');
 var firstpag = require('./routes/firstpag');
 var bsframework=require('./routes/bsframework')
 var sys = require('./routes/sys')
+var sysdata=require('./Data/sys_data')
 var http = require('http');
 var path = require('path');
 var app = express();
@@ -39,6 +40,8 @@ app.get('/bsframework',bsframework.index);
 app.get('/framework',bsframework.framework);
 app.get('/navdetail',bsframework.navdetail);
 app.get('/sysUser',sys.usermanage);
+app.get('/data/usermanageData',sysdata.usermanageData)
+app.get('/data/usermanageData2',sysdata.usermanageData2)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
